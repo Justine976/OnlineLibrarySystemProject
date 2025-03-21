@@ -1,0 +1,177 @@
+*{
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+/* Header styling */
+header {
+    background-color: #dadada;
+    color: #000000;
+    padding: 1px;
+    text-align: center;
+    top: 0;
+    width: 100%;
+}
+/* Hamburger icon for mobile */
+.menu-icon {
+    display: none;
+    font-size: 25px;
+    width: 35px;
+    height: 35px;
+    padding: 0 5px 5px 5px ;
+    border: #000000 solid 1px;
+    border-radius: 10px;
+    cursor: pointer;
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    color: #000000;
+    align-items: center;
+    flex-direction: row-reverse;
+}
+.menu-icon span {
+    font-size: 20px;
+    display: none;
+    padding-top: 10px;
+    margin: 20px;
+}
+nav {
+    height: 100%;
+    position: fixed;
+    top: 0;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center vertically */
+    align-items: center;     /* Center horizontally */
+}
+nav a {
+    width: 100%;
+    margin: 15px 0;
+    text-decoration: none;
+    font-size: 18px;
+    color: #000000;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+}
+nav a img.icon {
+    width: 35px;
+    height: 35px;
+    padding: 5px;
+    border: #000000 solid 1px;
+    border-radius: 10px;
+}
+nav a span {
+    margin: 0 8px;
+    display: none;
+}
+nav a:hover span {
+    display: inline;
+}
+header label:hover span {
+    display: inline;
+}
+/* Main content styling */
+main {
+    justify-content: center;
+    background-color: #dadada;
+    display: flex;
+    margin: 60px;
+    padding: 20px;
+    text-align: center;
+    border-radius: 30px;
+}
+aside {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    width: 50%;
+    margin-right: 20px;
+    padding: 20px;
+    border-radius: 10px;
+}
+section {
+    background-color: #ffffff;
+    width: 50%;
+    padding: 20px;
+    border-radius: 10px;
+}
+.error{
+    color: red;
+}
+.name{
+    color: limegreen;
+}
+.featured, .loginout {
+    background-color: #dadada;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+}
+.book {
+    background-color: #ffffff;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+}
+.inout {
+    background-color: #ffffff;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+}
+/* Fixed footer styling */
+footer {
+    display: block;
+    background-color: #dadada;
+    color: #000000;
+    text-align: center;
+    padding: 1px;
+    bottom: 0;
+    width: 100%;
+}
+/* Checkbox hack to toggle sidebar on mobile */
+#menu-toggle {
+    display: none;
+}
+@media screen and (min-width: 900px) {
+    nav {
+        left: 15px;
+    }
+}
+/* Responsive behavior for small screens */
+@media screen and (max-width: 900px) {
+    .menu-icon {
+        display: flex;
+    }
+    main {
+        display: block;
+        margin: 20px;
+    }
+    aside {
+        margin-bottom: 20px;
+        width: 100%;
+    }
+    section {
+        width: 100%;
+    }
+    nav {
+        display: none;
+        margin-top: 60px;
+        right: 15px;
+        justify-content: start;
+    }
+    nav a {
+        display: none;
+        justify-content: right;
+        flex-direction: row-reverse;
+    }
+    #menu-toggle:checked + nav, nav a {
+        display: flex;
+    }
+}
